@@ -16,22 +16,11 @@ public class Medication implements Parcelable {
         this.currentMedications = currentMedications;
         this.pastMedications = pastMedications;
     }
-/*
-    protected Medication(Parcel in) {
-        // Read map from parcel
-        // You need to implement this part
-        // For simplicity, let's skip this part
-        currentMedications = in.readMap(String, String);
-        pastMedication = in.readMap(String, String);
-    }
-*/
+
     protected Medication(Parcel in) {
         currentMedications = in.readString();
         pastMedications = in.readString();
     }
-
-
-
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
